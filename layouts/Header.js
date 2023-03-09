@@ -16,7 +16,7 @@ function Header() {
     return (
         <>
             {/* Header for Pc */}
-            <header className='bg-black py-4 px-5 text-white flex justify-between sticky top-0 left-0'>
+            <header className='bg-black py-4 px-5 text-white flex justify-between sticky top-0 left-0 z-40'>
                 <FaBars className='text-white h-auto lg:hidden w-[20px]' onClick={toggleNav} />
                 <Link href="/" className='flex items-center'> <Image src={Logo} alt='logo' className='h-[30px] w-auto max-lg:h-[25px]' /></Link>
                 <div className='flex items-center gap-6'>
@@ -28,7 +28,7 @@ function Header() {
             </header>
 
             {/* Side Navbar */}
-            <nav className={`ease-in duration-200 fixed top-0 w-full h-[100vh] bg-black lg:hidden ${toggle ? 'left-0' : 'left-[calc(-100vw-0px)]'} `}>
+            <nav className={`ease-in duration-200 fixed top-0 w-full h-[100vh] bg-black z-50 lg:hidden ${toggle ? 'left-0' : 'left-[calc(-100vw-0px)]'} `}>
                 <div className='bg-black py-4 px-5 text-white flex justify-between sticky top-0 left-0'>
                     <HiXMark className='text-white h-auto lg:hidden w-[20px] stroke-3' onClick={toggleNav} />
                     <Link href="/" className='flex items-center'> <Image src={Logo} alt='logo' className='h-[30px] w-auto max-lg:h-[25px]' /></Link>
