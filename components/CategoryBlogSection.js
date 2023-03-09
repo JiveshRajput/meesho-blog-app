@@ -1,32 +1,18 @@
 import Link from 'next/link'
-import React from 'react'
-import Slider from "react-slick";
+import React, { useEffect, useState } from 'react'
 import { HiArrowLongRight } from "react-icons/hi2";
 import { blogList } from '../helpers/config';
 import BlogCard, { BigBlogCard } from './BlogCard';
 
 function CategoryBlogSection(props) {
     const { sectionTitle, pageToredirect, sectionId, filterFunction, limit } = props;
-    const currentBlogsDisplayList = blogList.filter(filterFunction || ((blog) => blog)).slice(0, limit);
+    const [currentBlogsDisplayList, setCurrentBlogsDisplayList] = useState('');
 
-    var settings = {
-        dots: true,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        initialSlide: 1,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    initialSlide: 1
-                }
-            }
-        ]
-    };
+    useEffect(() => {
+        setTimeout(() => {
+            setCurrentBlogsDisplayList(blogList.filter(filterFunction || ((blog) => blog)).slice(0, limit));
+        }, 3000)
+    }, [])
 
     return (
         <>
@@ -37,14 +23,22 @@ function CategoryBlogSection(props) {
                     <h1 className='font-semibold text-2xl md:text-4xl'>{sectionTitle}</h1>
                     <Link href={pageToredirect} className='uppercase tracking-wide flex gap-2 items-center'>View all <HiArrowLongRight /> </Link>
                 </div>
-                {/* Top Card Image */}
-                <div className="my-4 md:my-8 max-md:hidden">
-                    <BigBlogCard blog={currentBlogsDisplayList[0]} />
-                </div>
-                {/*3 Cards Section */}
-                <div className="grid grid-cols-card gap-7">
-                    {currentBlogsDisplayList.slice(1).map((blog, ind) => <BlogCard key={ind} blog={blog} />)}
-                </div>
+                {/* Cards Section */}
+                {currentBlogsDisplayList ? (
+                    <>
+                        {/* Top Card Big */}
+                        <div className="my-4 md:my-8 max-md:hidden">
+                            <BigBlogCard blog={currentBlogsDisplayList[0]} />
+                        </div>
+                        {/* 3 Cards */}
+                        <div className="grid grid-cols-card gap-7">
+                            {currentBlogsDisplayList.slice(1).map((blog, ind) => <BlogCard key={ind} blog={blog} />)}
+                        </div>
+                    </>
+                )
+                    : <div className='w-full my-16 text-center text-xl md:text-3xl lg:text-5xl'>Loading...</div>
+                }
+
             </section>
         </>
     )

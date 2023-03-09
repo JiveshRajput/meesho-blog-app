@@ -9,11 +9,11 @@ export const navMenu = [
 ]
 
 export const sectionList = [
-    { nav: 'product', title: 'Product', hoverColor: 'hover:bg-[#007aff]' },
-    { nav: 'design', title: 'Design & UR', hoverColor: '#df2s5d' },
-    { nav: 'engineering', title: 'Engineering', hoverColor: '#df2s5d' },
-    { nav: 'culture', title: 'Culture', hoverColor: '#df2s5d' },
-    { nav: 'blog-home', title: 'All', hoverColor: '#df2s5d' },
+    { nav: 'product', title: 'Product', hoverColor: 'productHover' },
+    { nav: 'design', title: 'Design & UR', hoverColor: 'designHover' },
+    { nav: 'engineering', title: 'Engineering', hoverColor: 'engineeringHover' },
+    { nav: 'culture', title: 'Culture', hoverColor: 'cultureHover' },
+    { nav: 'blog-home', title: 'All', hoverColor: 'blog-homeHover' },
 ]
 
 export const footerList = [
@@ -138,7 +138,7 @@ export const blogList = [
     },
     {
         title: `#GrowWithMeesho - From Support Engineer to Tech Lead: Karthik K's Growth Story`,
-        img: `https://admin.meesho.io/content/images/2022/10/MicrofrontEND.png`,
+        img: `https://admin.meesho.io/content/images/2022/09/Blog-Cover-16_9.png`,
         desc: `A candid and heartfelt conversation with Karthik K about his growth as a Software Engineer.`,
         author: `Shivam Raj`,
         publishedOn: `SEP 26TH, 22 | 6 MIN READ`,

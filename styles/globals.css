@@ -6,38 +6,43 @@
   font-family: 'Inter', sans-serif;
 }
 
-body {
+/* body {
   position: relative
-}
-
-
+} */
 
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer base {
   html {
     @apply scroll-smooth;
   }
 
   body {
-    @apply bg-black text-white;
+    @apply bg-black text-white relative;
   }
 
   h1 {
     @apply text-4xl;
   }
-  
+
   h2 {
     @apply text-3xl;
   }
+
   h3 {
     @apply text-2xl;
   }
+
   h4 {
     @apply text-xl;
   }
+
   h5 {
     @apply text-lg;
   }
+
   p {
     @apply text-base;
   }
@@ -47,5 +52,20 @@ body {
   }
 }
 
-@tailwind components;
-@tailwind utilities;
+
+.productHover:hover {
+  background-color: #34a6f6;
+}
+.designHover:hover {
+  background-color: #d80314;
+}
+.engineeringHover:hover {
+  background-color: #d88485;
+}
+.cultureHover:hover {
+  background-color: #d641da;
+}
+.blog-homeHover:hover {
+  background-color: #8d4bd7;
+}
+

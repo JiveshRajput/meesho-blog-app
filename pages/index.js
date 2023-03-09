@@ -36,7 +36,7 @@ export default function Home() {
       <section className='max-w-1200 mx-auto mb-8 p-4 flex justify-between max-[750px]:hidden'>
         {toggleSearchBar && <div className='flex gap-2'>
           {sectionList.map((link, ind) =>
-            <a key={ind} href={`#${link.nav}`} className={`rounded-full flex-shrink-0 py-2 px-6 text-white capitalize cursor-pointer bg-cus-grey bg-opacity-80 hover:bg-[#007aff] ${link.hoverColor}`}>{link.title}</a>
+            <a key={ind} href={`#${link.nav}`} className={`rounded-full flex-shrink-0 py-2 px-6 text-white capitalize cursor-pointer bg-cus-grey bg-opacity-80 ${link.hoverColor}`}>{link.title}</a>
           )}
         </div>}
         {/* Toggling search bar with fields  */}
@@ -60,7 +60,7 @@ export default function Home() {
         </div>
         <div className='flex gap-2 flex-wrap justify-center'>
           {sectionList.map((link, ind) =>
-            <Link key={ind} href={`#${link.nav}`} className={`rounded-full flex-shrink-0 py-2 px-6 text-white capitalize cursor-pointer bg-cus-grey bg-opacity-80 hover:bg-[#007aff] ${link.hoverColor}`}>{link.title}</Link>
+            <Link key={ind} href={`#${link.nav}`} className={`rounded-full flex-shrink-0 py-2 px-6 text-white capitalize cursor-pointer bg-cus-grey bg-opacity-80 ${link.hoverColor}`}>{link.title}</Link>
           )}
         </div>
       </section>
