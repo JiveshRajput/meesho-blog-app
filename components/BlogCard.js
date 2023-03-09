@@ -11,8 +11,8 @@ function BlogCard(props) {
                     <Image src={img} alt={author} className='aspect-video w-full h-auto rounded-2xl' width={480} height={270} />
                     <h2 className='text-lg md:text-xl font-semibold text-secondary my-2 md:my-4'>{title}</h2>
                     <p className="text-sm md:text-base mb-2 md:mb-4">{desc}</p>
-                    <p className="text-sm md:text-base text-cus-grey font-semibold mb-2 uppercase">{author}</p>
-                    <p className="text-sm md:text-base text-cus-grey font-semibold mb-2">{publishedOn}</p>
+                    <p className="text-xs md:text-base text-cus-grey font-semibold mb-2 uppercase">{author}</p>
+                    <p className="text-xs md:text-base text-cus-grey font-semibold mb-2">{publishedOn}</p>
                 </div>
             </Link>
         </>
@@ -47,7 +47,7 @@ export function BigBlogCard(props) {
                             <h2 className='text-lg lg:text-3xl font-semibold text-secondary mb-2 lg:mb-4'>{title}</h2>
                             <p className="text-sm lg:text-base mb-2 lg:mb-4">{desc}</p>
                             <p className="text-sm lg:text-base text-cus-grey font-semibold mb-2 uppercase">{author}</p>
-                            <p className="text-sm md:text-base text-cus-grey font-semibold mb-2">{publishedOn}</p>
+                            <p className="text-sm lg:text-base text-cus-grey font-semibold mb-2">{publishedOn}</p>
                         </div>
                     </div>
                 </div>
