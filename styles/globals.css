@@ -6,9 +6,17 @@
   font-family: 'Inter', sans-serif;
 }
 
-@tailwind base;
+body {
+  position: relative
+}
 
+
+
+@tailwind base;
 @layer base {
+  body {
+    @apply bg-black text-white;
+  }
   h1 {
     @apply text-4xl;
   }
