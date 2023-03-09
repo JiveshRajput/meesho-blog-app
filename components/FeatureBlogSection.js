@@ -8,7 +8,7 @@ function FeatureBlogSection(props) {
 
     return (
         <>
-            <section id={sectionId} className='max-w-1200 mx-auto p-4 '>
+            <section id={sectionId} className='max-w-1200 mx-auto my-6 p-4'>
                 {/*header title part */}
                 <div className='flex justify-between items-center border-b border-cus-grey-1 py-4 mb-4'>
                     <h1 className='font-semibold text-2xl md:text-4xl'>{sectionTitle}</h1>

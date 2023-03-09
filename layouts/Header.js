@@ -8,11 +8,16 @@ import { navMenu } from '../helpers/config';
 
 function Header() {
     const [toggle, setToggle] = useState(false);
+    const [activeTab, setActiveTab] = useState('/');
 
-    function toggleNav(){
+    function toggleNav() {
         setToggle(!toggle);
     }
-    
+
+    function handleActiveTab(slug) {
+        setActiveTab(slug);
+    }
+
     return (
         <>
             {/* Header for Pc */}
@@ -21,7 +26,7 @@ function Header() {
                 <Link href="/" className='flex items-center'> <Image src={Logo} alt='logo' className='h-[30px] w-auto max-lg:h-[25px]' /></Link>
                 <div className='flex items-center gap-6'>
                     <ul className='flex gap-12 max-lg:hidden' role='navigation'>
-                    {navMenu.map((nav, ind)=> <li key={ind}><Link href={nav.nav} className='hover:text-secondary font-semibold text-lg'>{nav.title}</Link></li>)}
+                        {navMenu.map((nav, ind) => <li key={ind}><Link href={nav.nav} className={`${activeTab === nav.nav && 'text-secondary'} hover:text-secondary font-semibold text-lg`} onClick={() => handleActiveTab(nav.nav)}>{nav.title}</Link></li>)}
                     </ul>
                     <button className='uppercase bg-primary rounded-full px-6 py-2 tracking-wide hover:bg-secondary max-lg:py-1'>join us</button>
                 </div>
@@ -36,8 +41,8 @@ function Header() {
                         <button className='uppercase bg-primary rounded-full px-6 py-2 tracking-wide hover:bg-secondary max-lg:py-1'>join us</button>
                     </div>
                 </div>
-                <ul className='flex flex-col py-20 px-4 text-white divide-y divide-cus-grey-1' role='navigation'>
-                {navMenu.map((nav, ind)=> <li key={ind}><Link href={nav.nav}  className='hover:text-secondary font-normal block text-2xl my-4'>{nav.title}</Link></li>)}
+                <ul className='flex flex-col py-12 px-4 text-white divide-y divide-cus-grey-1' role='navigation'>
+                    {navMenu.map((nav, ind) => <li key={ind}><Link href={nav.nav} className={`${activeTab === nav.nav && 'text-secondary'} hover:text-secondary font-normal block text-2xl my-4`} onClick={() => handleActiveTab(nav.nav)} >{nav.title}</Link></li>)}
                 </ul>
             </nav>
         </>

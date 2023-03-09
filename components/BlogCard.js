@@ -7,7 +7,7 @@ function BlogCard(props) {
     return (
         <>
             <Link href={`/blog/${slug}`} className='ease-in duration-100 hover:scale-[1.05]'>
-                <div className="w-[300px] md:w-full">
+                <div className="md:w-full">
                     <Image src={img} alt={author} className='aspect-video w-full h-auto rounded-2xl' width={480} height={270} />
                     <h2 className='text-lg md:text-xl font-semibold text-secondary my-2 md:my-4'>{title}</h2>
                     <p className="text-sm md:text-base mb-2 md:mb-4">{desc}</p>

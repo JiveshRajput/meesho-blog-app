@@ -9,7 +9,7 @@ import FeatureBlogSection from '../components/FeatureBlogSection';
 
 export default function Home() {
   const [toggleSearchBar, setToggleSearchBar] = useState(true);
-
+  
   function toggleSearchBarBtn() {
     setToggleSearchBar(!toggleSearchBar)
   }

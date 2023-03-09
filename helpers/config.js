@@ -2,10 +2,10 @@ import { FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa'
 
 export const navMenu = [
     { nav: '/', title: 'Home' },
-    { nav: '/', title: 'Tech at Meesho' },
-    { nav: '/', title: 'Life at Meesho' },
-    { nav: '/', title: 'Blog' },
-    { nav: '/', title: 'News' },
+    { nav: '/tech-at-meesho', title: 'Tech at Meesho' },
+    { nav: '/life-at-meesho', title: 'Life at Meesho' },
+    { nav: '/blog', title: 'Blog' },
+    { nav: '/news', title: 'News' },
 ]
 
 export const sectionList = [
