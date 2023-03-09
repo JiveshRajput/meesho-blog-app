@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { navMenu } from '../helpers/config';
 
 function Header() {
-    const [toggle, setToggle] = useState(true);
+    const [toggle, setToggle] = useState(false);
 
     function toggleNav(){
         setToggle(!toggle);

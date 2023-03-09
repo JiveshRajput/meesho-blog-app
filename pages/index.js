@@ -5,6 +5,7 @@ import { FaSearch } from "react-icons/fa";
 import { HiXMark } from "react-icons/hi2";
 import { useState } from 'react';
 import CategoryBlogSection from '../components/CategoryBlogSection';
+import FeatureBlogSection from '../components/FeatureBlogSection';
 
 export default function Home() {
   const [toggleSearchBar, setToggleSearchBar] = useState(true);
@@ -63,11 +64,16 @@ export default function Home() {
           )}
         </div>
       </section>
-
+      {/* Product Section */}
       <CategoryBlogSection sectionTitle='Product' pageToredirect='/blog' sectionId='product' limit={4} filterFunction={(blog) => blog.category === 'product'} />
+      {/* Feature Section */}
+      <FeatureBlogSection sectionTitle='Feature' sectionId='feature' />
+      {/* Design & UR Section */}
       <CategoryBlogSection sectionTitle='Design & UR' pageToredirect='/' sectionId='design' limit={4} filterFunction={(blog) => blog.category === 'design'} />
-      <CategoryBlogSection sectionTitle='Engineering' pageToredirect='/' sectionId='engineering' limit={4} filterFunction={(blog) => blog.category === 'engineering'}/>
-      <CategoryBlogSection sectionTitle='Culture' pageToredirect='/' sectionId='culture' limit={4} filterFunction={(blog) => blog.category === 'culture'}/>
+      {/* EngineeringSection */}
+      <CategoryBlogSection sectionTitle='Engineering' pageToredirect='/' sectionId='engineering' limit={4} filterFunction={(blog) => blog.category === 'engineering'} />
+      {/* Culture Section */}
+      <CategoryBlogSection sectionTitle='Culture' pageToredirect='/' sectionId='culture' limit={4} filterFunction={(blog) => blog.category === 'culture'} />
     </>
   )
 }

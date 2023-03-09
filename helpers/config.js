@@ -32,7 +32,7 @@ export const blogList = [
         author: `Meesho`,
         publishedOn: `FEB 24TH, 23 | 4 MIN READ`,
         category: 'product',
-        featured: false,
+        featured: true,
         slug: `meesho-mantras-reloaded-some-improvements-a-few-alterations-all-with-an-eye-on-the-future`
     },
     {
@@ -92,7 +92,7 @@ export const blogList = [
         author: `Pravalhika Injarapu`,
         publishedOn: `AUG 23RD, 22 | 6 MIN READ`,
         category: 'design',
-        featured: false,
+        featured: true,
         slug: `redesigning-product-checkout-meesho`
     },
     {
@@ -132,7 +132,7 @@ export const blogList = [
         author: `Shivam Raj`,
         publishedOn: `SEP 26TH, 22 | 6 MIN READ`,
         category: 'engineering',
-        featured: false,
+        featured: true,
         slug: `tech-grow-with-meesho-engineer-techlead-karthik`
     },
     {
@@ -162,7 +162,7 @@ export const blogList = [
         author: `Shivam Raj`,
         publishedOn: `NOV 25TH, 22 | 6 MIN READ`,
         category: 'culture',
-        featured: false,
+        featured: true,
         slug: `tech-grow-with-meesho-software-engineer-without-cs-degree`
     },
     {

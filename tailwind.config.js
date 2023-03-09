@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        'card': 'repeat(auto-fit, minmax(300px, 1fr))',
+      },
       colors: {
         'primary': '#1d58db',
         'secondary': '#58b386',
