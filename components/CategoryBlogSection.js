@@ -7,7 +7,8 @@ import BlogCard from './BlogCard';
 
 function CategoryBlogSection(props) {
     const { sectionTitle, pageToredirect, sectionId, filterFunction, limit } = props;
-    const currentBlogsDisplayList = blogList.filter(filterFunction).slice(0, limit);
+
+    const currentBlogsDisplayList = blogList.filter(filterFunction || ((blog) => blog)).slice(0, limit);
 
     return (
         <>

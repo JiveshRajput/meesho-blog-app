@@ -32,7 +32,7 @@ export default function Home() {
         </div>
       </main>
       {/* Search Bar and section link words */}
-      <section className='max-w-1200 mx-auto mb-10 p-4 flex justify-between max-[750px]:hidden'>
+      <section className='max-w-1200 mx-auto mb-8 p-4 flex justify-between max-[750px]:hidden'>
         {toggleSearchBar && <div className='flex gap-2'>
           {sectionList.map((link, ind) =>
             <a key={ind} href={`#${link.nav}`} className={`rounded-full flex-shrink-0 py-2 px-6 text-white capitalize cursor-pointer bg-cus-grey bg-opacity-80 hover:bg-[#007aff] ${link.hoverColor}`}>{link.title}</a>
@@ -59,15 +59,15 @@ export default function Home() {
         </div>
         <div className='flex gap-2 flex-wrap justify-center'>
           {sectionList.map((link, ind) =>
-            <Link id={ind} href={`#${link.nav}`} className={`rounded-full flex-shrink-0 py-2 px-6 text-white capitalize cursor-pointer bg-cus-grey bg-opacity-80 hover:bg-[#007aff] ${link.hoverColor}`}>{link.title}</Link>
+            <Link key={ind} href={`#${link.nav}`} className={`rounded-full flex-shrink-0 py-2 px-6 text-white capitalize cursor-pointer bg-cus-grey bg-opacity-80 hover:bg-[#007aff] ${link.hoverColor}`}>{link.title}</Link>
           )}
         </div>
       </section>
 
       <CategoryBlogSection sectionTitle='Product' pageToredirect='/blog' sectionId='product' limit={4} filterFunction={(blog) => blog.category === 'product'} />
-      {/* <CategoryBlogSection sectionTitle='Design & UR' pageToredirect='/' sectionId='design'/> */}
-      {/* <CategoryBlogSection sectionTitle='Engineering' pageToredirect='/' sectionId='engineering'/> */}
-      {/* <CategoryBlogSection sectionTitle='Culture' pageToredirect='/' sectionId='culture'/> */}
+      <CategoryBlogSection sectionTitle='Design & UR' pageToredirect='/' sectionId='design' limit={4} filterFunction={(blog) => blog.category === 'design'} />
+      <CategoryBlogSection sectionTitle='Engineering' pageToredirect='/' sectionId='engineering' limit={4} filterFunction={(blog) => blog.category === 'engineering'}/>
+      <CategoryBlogSection sectionTitle='Culture' pageToredirect='/' sectionId='culture' limit={4} filterFunction={(blog) => blog.category === 'culture'}/>
     </>
   )
 }
